@@ -10,10 +10,12 @@ docker run -d --name bungeecord-proxy \
 
 ## Container Env
 
-|ENV Name|Type|Parameter|Default|
-|:-------|:---|---------|:------|
+if you use `BC_LISTENER_NAME`, put to `name` key in `config.yml -> listeners`
+
+|ENV Name|Type|Flag|Default|
+|:-------|:---|:---|:------|
 |BC_LISTENER_NAME|String|optional|listeners[0]|
 |BC_SERVER_NAME|String|required||
 |BC_SERVER_HOST|String|required|| 
-|BC_SERVER_MOTD|String|optional|<span style="background:#82540F;"><span style="color:#3ffe3f">Just anothor BungeeCord - Forced Host</span> <span style="color:#3ffefe">by bungee-proxy</span></span>|
+|BC_SERVER_MOTD|String|optional|Just another BungeeCord - Forced Host by bungee-proxy|
 |BC_SERVER_RESTRICTED|boolean|optional|false|
