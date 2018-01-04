@@ -2,13 +2,16 @@
 
 ## Running Container
 ```docker
-docker run -d -v /var/run/docker.sock:/var/run/docker.sock:ro -p 25577:25577 syuchan1005/bungeecord-proxy:latest
+docker run -d --name bungeecord-proxy \
+-v /path/to/config:/bungee/config \
+-v /var/run/docker.sock:/var/run/docker.sock:ro \
+-p 25565:25577 syuchan1005/bungeecord-proxy:latest
 ```
 
 ## Container Env
 
-|ENV Name|Type|parameter|Default|
-|:---|:---|---|:---|:---|
+|ENV Name|Type|Parameter|Default|
+|:-------|:---|---------|:------|
 |BC_LISTENER_NAME|String|optional|listeners[0]|
 |BC_SERVER_NAME|String|required||
 |BC_SERVER_HOST|String|required|| 
